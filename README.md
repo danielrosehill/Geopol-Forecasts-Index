@@ -17,17 +17,44 @@ Accuracy analysis will be added as prediction windows close and ground truth bec
 
 ---
 
+## Accuracy Rubric
+
+All predictions are graded on a standard scale. The `/validate-predictions` skill uses Tavily to search for real-world outcomes and applies this rubric automatically.
+
+| Grade | Score | Criteria |
+|-------|-------|----------|
+| **Correct** | 1.0 | Core prediction matched reality in direction and approximate magnitude/timing |
+| **Largely Correct** | 0.75 | Direction right, magnitude or timing off by a modest margin |
+| **Partially Correct** | 0.5 | General direction right but significantly off on timing, magnitude, or mechanism |
+| **Incorrect** | 0.0 | Prediction contradicted by what actually happened |
+| **Not Yet Testable** | — | Window still open or insufficient data to assess |
+
+**Scoring rules**: Direction is scored first, then adjusted for timing and magnitude. A >2x timing error drops Correct to Largely Correct or below. Binary predictions ("X won't happen") are scored on the stated claim, not the probability. Wire services (Reuters, AP) take precedence over opinion sources.
+
+---
+
 ## Accuracy Tracking
 
-| Run | Window | Prediction | Actual Outcome | Accuracy | Notes |
-|-----|--------|------------|----------------|----------|-------|
-| 1 | 24h-1wk | Israeli operations continue at full intensity | IDF continued strikes through March and into April | Correct | 6/6 lenses agreed |
-| 1 | 24h-1wk | Iranian proxy retaliations continue | Hezbollah maintained 55+ attacks/day | Correct | 5/6 lenses agreed |
-| 1 | 1mo | Iranian ballistic missile capabilities degraded 50%+ | Coalition struck ~330/470 launchers (70%) | Correct | 5/6 lenses agreed |
-| 1 | 1mo | IDF maintains/extends Lebanon buffer zone to Litani | IDF reached Litani River by March 24 | Correct | 5/6 lenses agreed |
-| 1 | 1wk | March 27 deadline fails (no deal reached) | No deal; war continued until April 8 ceasefire | Correct | 5/6 lenses agreed |
-| 1 | 1mo | No ceasefire holds before March 27 | Ceasefire came April 8 (after deadline) -- not anticipated | Partially correct | Timeframe was right; ceasefire ultimately happened later |
-| 2 | +72h | 22% chance ceasefire holds at 72h | *Window still open at time of indexing* | TBD | Simulation gave 28% |
+### Run 1 — Iran-Israel-US Conflict Trajectory (24/03/2026)
+
+**Run Score: 0.75** (5 Correct, 1 Incorrect out of 6 graded)
+
+| # | Window | Prediction | Outcome | Grade | Score |
+|---|--------|------------|---------|-------|-------|
+| 1.1 | 24h-1wk | Israeli operations continue at full intensity | IDF continued strikes through to April 8 ceasefire | Correct | 1.0 |
+| 1.2 | 24h-1wk | Iranian proxy retaliations continue | Hezbollah maintained 55+ attacks/day through the period | Correct | 1.0 |
+| 1.3 | 1mo | Iranian ballistic missile capabilities degraded 50%+ | Coalition struck ~330/470 known launchers (70%) | Correct | 1.0 |
+| 1.4 | 1mo | IDF maintains/extends Lebanon buffer zone to Litani | IDF reached Litani River by March 24 | Correct | 1.0 |
+| 1.5 | 1wk | March 27 deadline fails (no deal reached) | No deal reached; war continued until April 8 ceasefire | Correct | 1.0 |
+| 1.6 | 1mo | No ceasefire holds before March 27 | Ceasefire reached April 8 — model assessed this as improbable | Incorrect | 0.0 |
+
+### Run 2 — Iran-Israel-US Ceasefire Durability (09/04/2026)
+
+**Run Score: TBD** (0 of 1 predictions graded)
+
+| # | Window | Prediction | Outcome | Grade | Score |
+|---|--------|------------|---------|-------|-------|
+| 2.1 | +72h | 22% chance ceasefire holds at 72h (simulation: 28%) | *Not yet assessed* | Not Yet Testable | — |
 
 ---
 
