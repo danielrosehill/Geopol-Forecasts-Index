@@ -12,6 +12,7 @@ Accuracy analysis will be added as prediction windows close and ground truth bec
 
 | # | Date | Topic | Actors | Lenses | Model | Open-Sourced Report | Key Finding |
 |---|------|-------|--------|--------|-------|-------------------|-------------|
+| 3 | 10/04/2026 | Iran forced regime change probability | 10 | 6 | Claude Sonnet 4.5 | [Iran-Regime-Change-Forecast-1004](https://github.com/danielrosehill/Iran-Regime-Change-Forecast-1004) | <1% / 1-3% / 4-9% at +1wk/+1mo/+1yr. IRGC institutional resilience exceeds military degradation; opposition fragmentation is binding constraint |
 | 2 | 09/04/2026 | Iran-Israel-US ceasefire durability | 38 | 6 | Claude Sonnet 4.5 | [Iran-Israel-Ceasefire-Prediction-090426](https://github.com/danielrosehill/Iran-Israel-Ceasefire-Prediction-090426) | 22% chance ceasefire holds at +72h (simulation: 28% -- 6-point convergence between independent stages) |
 | 1 | 24/03/2026 | Iran-Israel-US conflict trajectory (Day 25) | -- | 6 | -- | [Iran-Israel-Conflict-Trajectory-240326](https://github.com/danielrosehill/Iran-Israel-Conflict-Trajectory-240326) | 5/5 high-confidence predictions validated; ceasefire (April 8) was not anticipated |
 
