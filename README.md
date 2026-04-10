@@ -13,17 +13,21 @@ Accuracy analysis will be added as prediction windows close and ground truth bec
 | # | Date | Topic | Actors | Lenses | Model | Open-Sourced Report | Key Finding |
 |---|------|-------|--------|--------|-------|-------------------|-------------|
 | 2 | 09/04/2026 | Iran-Israel-US ceasefire durability | 38 | 6 | Claude Sonnet 4.5 | [Iran-Israel-Ceasefire-Prediction-090426](https://github.com/danielrosehill/Iran-Israel-Ceasefire-Prediction-090426) | 22% chance ceasefire holds at +72h (simulation: 28% -- 6-point convergence between independent stages) |
-| 1 | 24/03/2026 | Iran-Israel-US conflict trajectory | -- | 6 | -- | *(in main repo)* | Consensus on short-term persistence of Israeli operations; sharp divergence on US-Iran March 27 deadline outcome |
+| 1 | 24/03/2026 | Iran-Israel-US conflict trajectory (Day 25) | -- | 6 | -- | [Iran-Israel-Conflict-Trajectory-240326](https://github.com/danielrosehill/Iran-Israel-Conflict-Trajectory-240326) | 5/5 high-confidence predictions validated; ceasefire (April 8) was not anticipated |
 
 ---
 
 ## Accuracy Tracking
 
-*To be populated as prediction windows close.*
-
 | Run | Window | Prediction | Actual Outcome | Accuracy | Notes |
 |-----|--------|------------|----------------|----------|-------|
-| | | | | | |
+| 1 | 24h-1wk | Israeli operations continue at full intensity | IDF continued strikes through March and into April | Correct | 6/6 lenses agreed |
+| 1 | 24h-1wk | Iranian proxy retaliations continue | Hezbollah maintained 55+ attacks/day | Correct | 5/6 lenses agreed |
+| 1 | 1mo | Iranian ballistic missile capabilities degraded 50%+ | Coalition struck ~330/470 launchers (70%) | Correct | 5/6 lenses agreed |
+| 1 | 1mo | IDF maintains/extends Lebanon buffer zone to Litani | IDF reached Litani River by March 24 | Correct | 5/6 lenses agreed |
+| 1 | 1wk | March 27 deadline fails (no deal reached) | No deal; war continued until April 8 ceasefire | Correct | 5/6 lenses agreed |
+| 1 | 1mo | No ceasefire holds before March 27 | Ceasefire came April 8 (after deadline) -- not anticipated | Partially correct | Timeframe was right; ceasefire ultimately happened later |
+| 2 | +72h | 22% chance ceasefire holds at 72h | *Window still open at time of indexing* | TBD | Simulation gave 28% |
 
 ---
 
