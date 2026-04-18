@@ -1,20 +1,27 @@
 # Geopol Forecasts Index
 
-Index of prediction runs produced by [Geopol Forecaster](https://github.com/danielrosehill/Geopol-Forecaster), a two-stage geopolitical forecasting pipeline combining [Snowglobe](https://github.com/IQTLabs/snowglobe)-style actor simulation with [LLM Council](https://github.com/karpathy/llm-council)-style multi-perspective analytical review.
+Index of prediction runs across two related pipelines:
 
-Each run is seeded with live news data and produces probabilistic forecasts with credible intervals across multiple time horizons.
+- **[Geopol Forecaster](https://github.com/danielrosehill/Geopol-Forecaster)** — two-stage pipeline combining [Snowglobe](https://github.com/IQTLabs/snowglobe)-style actor simulation with [LLM Council](https://github.com/karpathy/llm-council)-style multi-perspective analytical review.
+- **[Geopol Forecast Council](https://github.com/danielrosehill/Geopol-Forecast-Council)** — lean spin-off that skips actor simulation and polls a lineage-diverse LLM panel for concrete predictions per horizon over a grounded SITREP.
 
-Accuracy analysis will be added as prediction windows close and ground truth becomes available.
+Each run is seeded with live news data and produces probabilistic or structured-prediction forecasts across multiple time horizons. Accuracy analysis is added as prediction windows close.
 
 ---
 
-## Prediction Runs
+## Prediction Runs — Geopol Forecaster
 
 | # | Date | Topic | Actors | Lenses | Model | Open-Sourced Report | Key Finding |
 |---|------|-------|--------|--------|-------|-------------------|-------------|
 | 3 | 10/04/2026 | Iran forced regime change probability | 10 | 6 | Claude Sonnet 4.5 | [Iran-Regime-Change-Forecast-1004](https://github.com/danielrosehill/Iran-Regime-Change-Forecast-1004) | <1% / 1-3% / 4-9% at +1wk/+1mo/+1yr. IRGC institutional resilience exceeds military degradation; opposition fragmentation is binding constraint |
 | 2 | 09/04/2026 | Iran-Israel-US ceasefire durability | 38 | 6 | Claude Sonnet 4.5 | [Iran-Israel-Ceasefire-Prediction-090426](https://github.com/danielrosehill/Iran-Israel-Ceasefire-Prediction-090426) | 22% chance ceasefire holds at +72h (simulation: 28% -- 6-point convergence between independent stages) |
 | 1 | 24/03/2026 | Iran-Israel-US conflict trajectory (Day 25) | -- | 6 | -- | [Iran-Israel-Conflict-Trajectory-240326](https://github.com/danielrosehill/Iran-Israel-Conflict-Trajectory-240326) | 5/5 high-confidence predictions validated; ceasefire (April 8) was not anticipated |
+
+## Prediction Runs — Geopol Forecast Council
+
+| # | Date | Topic | Panel | Horizons | Head / Author | Run Directory | Key Finding |
+|---|------|-------|-------|----------|---------------|---------------|-------------|
+| C1 | 18/04/2026 | Iran-Israel-US conflict evolution | GLM 5.1 · DeepSeek v3.2 · Gemini 3 Flash · Claude Sonnet 4.6 · Kimi k2.5 | 24h / 1w / 1m | Claude Sonnet 4.6 / Claude Sonnet 4.6 | [2026-04-18_235440](https://github.com/danielrosehill/Geopol-Forecast-Council/tree/master/reports/2026-04-18_235440) ([main PDF](https://github.com/danielrosehill/Geopol-Forecast-Council/blob/master/reports/2026-04-18_235440/report.pdf) · [full PDF](https://github.com/danielrosehill/Geopol-Forecast-Council/blob/master/reports/2026-04-18_235440/report-full.pdf)) | Panel confidence range 0.31–0.52 at 24h; escalatory predictions outweighed conciliatory at 24h. Modal views: nominal Lebanon ceasefire deteriorating, Hormuz closed, Hormuz/proxy-violence risks dominating short horizon |
 
 ---
 
@@ -89,7 +96,8 @@ Neither stage has access to the other's reasoning during execution. When they co
 
 ## Related Repositories
 
-- **[Geopol-Forecaster](https://github.com/danielrosehill/Geopol-Forecaster)** -- the pipeline source code
+- **[Geopol-Forecaster](https://github.com/danielrosehill/Geopol-Forecaster)** -- the full (expensive) two-stage pipeline source code
+- **[Geopol-Forecast-Council](https://github.com/danielrosehill/Geopol-Forecast-Council)** -- the lean council-only spin-off
 - **[Geopol-Forecaster-Planning](https://github.com/danielrosehill/Geopol-Forecaster-Planning)** -- design docs and planning
 - **[AI-Geopol-Projects](https://github.com/danielrosehill/AI-Geopol-Projects)** -- curated list of AI geopolitical simulation projects
 - **[Geopolitical-And-OSINT-Index](https://github.com/danielrosehill/Geopolitical-And-OSINT-Index)** -- broader OSINT and geopolitical analysis index
