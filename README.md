@@ -1,6 +1,10 @@
 # Geopol Forecasts Index
 
+[![Master Index](https://img.shields.io/badge/Master%20Index-All%20Repositories-purple?style=for-the-badge&logo=github)](https://github.com/danielrosehill/Start-Here)
+
 Index of prediction runs across two related pipelines:
+
+**Last Updated:** October 2026
 
 - **[Geopol Forecaster](https://github.com/danielrosehill/Geopol-Forecaster)** — two-stage pipeline combining [Snowglobe](https://github.com/IQTLabs/snowglobe)-style actor simulation with [LLM Council](https://github.com/karpathy/llm-council)-style multi-perspective analytical review.
 - **[Geopol Forecast Council](https://github.com/danielrosehill/Geopol-Forecast-Council)** — lean spin-off that skips actor simulation and polls a lineage-diverse LLM panel for concrete predictions per horizon over a grounded SITREP.
@@ -98,7 +102,6 @@ Neither stage has access to the other's reasoning during execution. When they co
 
 - **[Geopol-Forecaster](https://github.com/danielrosehill/Geopol-Forecaster)** -- the full (expensive) two-stage pipeline source code
 - **[Geopol-Forecast-Council](https://github.com/danielrosehill/Geopol-Forecast-Council)** -- the lean council-only spin-off
-- **[Geopol-Forecaster-Planning](https://github.com/danielrosehill/Geopol-Forecaster-Planning)** -- design docs and planning
 - **[AI-Geopol-Projects](https://github.com/danielrosehill/AI-Geopol-Projects)** -- curated list of AI geopolitical simulation projects
 - **[Geopolitical-And-OSINT-Index](https://github.com/danielrosehill/Geopolitical-And-OSINT-Index)** -- broader OSINT and geopolitical analysis index
 
